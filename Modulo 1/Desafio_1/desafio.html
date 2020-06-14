@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio 1</title>
+    <script src="desafio.js"></script>
+    <link rel="stylesheet" type="text/css" href="desafio.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="text-center">Trabalho Prático 1</h1>
+      <!--RED-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend mx-auto">
+          <input
+            type="text"
+            id="redText"
+            class="input-group-text"
+            value="(R) Vermelho"
+            disabled
+          />&nbsp
+          <input
+            type="range"
+            name="rangeRed"
+            id="rangeRed"
+            class="form-control-range"
+            value="0"
+            min="0"
+            max="255"
+          />&nbsp
+          <input
+            type="text"
+            class="input-group-text"
+            name="red"
+            id="red"
+            value="0"
+            disabled
+          />
+        </div>
+      </div>
+      <!--Green-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend mx-auto">
+          <input
+            type="text"
+            id="greenText"
+            class="input-group-text"
+            value="(G) Verde"
+            disabled
+          />&nbsp
+          <input
+            type="range"
+            class="form-control-range"
+            name="rangeGreen"
+            id="rangeGreen"
+            value="0"
+            min="0"
+            max="255"
+          />&nbsp
+          <input
+            type="text"
+            class="input-group-text"
+            name="green"
+            id="green"
+            value="0"
+            disabled
+          />
+        </div>
+      </div>
+
+      <!--BLUE-->
+      <div class="input-group mb-3">
+        <div class="input-group-prepend mx-auto">
+          <input
+            type="text"
+            id="blueText"
+            class="input-group-text"
+            value="(B) Azul"
+            disabled
+          />&nbsp
+          <input
+            type="range"
+            class="form-control-range"
+            name="rangeBlue"
+            id="rangeBlue"
+            value="0"
+            min="0"
+            max="255"
+          />&nbsp
+          <input
+            type="text"
+            class="input-group-text"
+            name="blue"
+            id="blue"
+            value="0"
+            disabled
+          />
+        </div>
+      </div>
+      <div>
+        <div>
+          <div id="color" class="mx-auto d-block"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
