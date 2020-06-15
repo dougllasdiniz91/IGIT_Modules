@@ -4,6 +4,7 @@ import DiscountInss from './inputsReadOnly/DiscountInss';
 import BaseIrpf from './inputsReadOnly/BaseIrpf';
 import DiscountIrpf from './inputsReadOnly/DiscountIrpf';
 import NetSalary from './inputsReadOnly/NetSalary';
+import ProgressBarSalary from './ProgressBarSalary';
 
 export default class InputReadOnly extends Component {
   render() {
@@ -30,6 +31,20 @@ export default class InputReadOnly extends Component {
               salary: dataSalary.netSalary,
               percent: dataSalary.percentNetSalary.toFixed(2),
             }}
+          />
+        </div>
+        <div className="row">
+          <ProgressBarSalary
+            percent={dataSalary.percentDiscountINSS.toFixed(2)}
+            color="#e67e22"
+          />
+          <ProgressBarSalary
+            percent={dataSalary.percentDiscountIRPF.toFixed(2)}
+            color="#c0392b"
+          />
+          <ProgressBarSalary
+            percent={dataSalary.percentNetSalary.toFixed(2)}
+            color="#16a085"
           />
         </div>
       </div>

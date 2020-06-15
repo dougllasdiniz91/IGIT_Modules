@@ -13,12 +13,13 @@ export default class DiscountInss extends Component {
     }).format(discount.discountInss);
 
     return (
-      <label className="input-field col s3">
+      <label className="input-field col s12 m4 l3">
         <h6>Desconto INSS:</h6>
         <input
           type="text"
+          readOnly
           value={`${discountFormat} (${percentFormat})`}
-          disabled
+          id="discountInss"
         ></input>
       </label>
     );

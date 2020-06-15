@@ -12,12 +12,13 @@ export default class DiscountIrpf extends Component {
       currency: 'BRL',
     }).format(discount.discountIrpf);
     return (
-      <label className="input-field col s3">
+      <label className="input-field col s12 m4 l3">
         <h6>Desconto IRPF:</h6>
         <input
           type="text"
+          readOnly
           value={`${discountFormat} (${percentFormat})`}
-          disabled
+          id="discountIrpf"
         ></input>
       </label>
     );

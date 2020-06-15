@@ -1,0 +1,18 @@
+.inputText {
+  font-weight: bold;
+}
+
+#discountIrpf {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+#discountInss {
+  color: #e67e22;
+  font-weight: bold;
+}
+
+#netSalary {
+  color: #16a085;
+  font-weight: bold;
+}

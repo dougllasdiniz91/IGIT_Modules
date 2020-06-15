@@ -13,12 +13,13 @@ export default class NetSalary extends Component {
     }).format(valueSalary.salary);
 
     return (
-      <label className="input-field col s3">
+      <label className="input-field col s12 m4 l3">
         <h6>Salário Líquido:</h6>
         <input
           type="text"
+          readOnly
+          id="netSalary"
           value={`${salaryFormat} (${percentFormat})`}
-          disabled
         ></input>
       </label>
     );
