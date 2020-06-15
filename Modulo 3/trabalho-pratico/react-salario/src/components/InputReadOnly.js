@@ -33,7 +33,14 @@ export default class InputReadOnly extends Component {
             }}
           />
         </div>
-        <div className="row">
+        <div
+          style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <ProgressBarSalary
             percent={dataSalary.percentDiscountINSS.toFixed(2)}
             color="#e67e22"
