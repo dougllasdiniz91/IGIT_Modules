@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 export default class DiscountIrpf extends Component {
   render() {
-    const discount = this.props.valueDiscountIRPF;
+    const { discountIrpf, percent } = this.props;
     const percentFormat = new Intl.NumberFormat('pt-BR', {
       style: 'unit',
       unit: 'percent',
-    }).format(discount.percent);
+    }).format(percent);
     const discountFormat = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
-    }).format(discount.discountIrpf);
+    }).format(discountIrpf);
     return (
       <label className="input-field col s12 m4 l3">
         <h6>Desconto IRPF:</h6>

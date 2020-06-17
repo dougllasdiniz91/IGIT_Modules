@@ -8,30 +8,30 @@ import ProgressBarSalary from './ProgressBarSalary';
 
 export default class InputReadOnly extends Component {
   render() {
-    const dataSalary = this.props.dataCalculateSalary;
+    const {
+      baseINSS,
+      baseIRPF,
+      discountINSS,
+      discountIRPF,
+      percentDiscountINSS,
+      percentDiscountIRPF,
+      netSalary,
+      percentNetSalary,
+    } = this.props.dataCalculateSalary;
     return (
       <div>
         <div className="row">
-          <BaseInss valueBaseINSS={dataSalary.baseINSS} />
+          <BaseInss valueBaseINSS={baseINSS} />
           <DiscountInss
-            valueDiscountINSS={{
-              discountInss: dataSalary.discountINSS,
-              percent: dataSalary.percentDiscountINSS.toFixed(2),
-            }}
+            discountInss={discountINSS}
+            percent={percentDiscountINSS.toFixed(2)}
           />
-          <BaseIrpf valueBaseIRPF={dataSalary.baseIRPF} />
+          <BaseIrpf valueBaseIRPF={baseIRPF} />
           <DiscountIrpf
-            valueDiscountIRPF={{
-              discountIrpf: dataSalary.discountIRPF,
-              percent: dataSalary.percentDiscountIRPF.toFixed(2),
-            }}
+            discountIrpf={discountIRPF}
+            percent={percentDiscountIRPF.toFixed(2)}
           />
-          <NetSalary
-            valueNetSalary={{
-              salary: dataSalary.netSalary,
-              percent: dataSalary.percentNetSalary.toFixed(2),
-            }}
-          />
+          <NetSalary salary={netSalary} percent={percentNetSalary.toFixed(2)} />
         </div>
         <div
           style={{
@@ -42,15 +42,15 @@ export default class InputReadOnly extends Component {
           }}
         >
           <ProgressBarSalary
-            percent={dataSalary.percentDiscountINSS.toFixed(2)}
+            percent={percentDiscountINSS.toFixed(2)}
             color="#e67e22"
           />
           <ProgressBarSalary
-            percent={dataSalary.percentDiscountIRPF.toFixed(2)}
+            percent={percentDiscountIRPF.toFixed(2)}
             color="#c0392b"
           />
           <ProgressBarSalary
-            percent={dataSalary.percentNetSalary.toFixed(2)}
+            percent={percentNetSalary.toFixed(2)}
             color="#16a085"
           />
         </div>

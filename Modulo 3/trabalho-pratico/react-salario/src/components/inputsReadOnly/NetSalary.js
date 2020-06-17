@@ -2,15 +2,15 @@ import React, { Component } from 'react';
 
 export default class NetSalary extends Component {
   render() {
-    const valueSalary = this.props.valueNetSalary;
+    const { salary, percent } = this.props;
     const percentFormat = new Intl.NumberFormat('pt-BR', {
       style: 'unit',
       unit: 'percent',
-    }).format(valueSalary.percent);
+    }).format(percent);
     const salaryFormat = new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
-    }).format(valueSalary.salary);
+    }).format(salary);
 
     return (
       <label className="input-field col s12 m4 l3">

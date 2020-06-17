@@ -43,6 +43,7 @@ export default class InputFullSalary extends Component {
               type="number"
               id="salary"
               onInput={this.handleInputSalary}
+              placeholder="Digite o salário..."
             ></input>
           </label>
         </div>

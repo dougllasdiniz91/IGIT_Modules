@@ -3,6 +3,7 @@ import './inputs.css';
 
 export default class BaseInss extends Component {
   render() {
+    const { valueBaseINSS } = this.props;
     return (
       <label className="input-field col s12 m4 l3">
         <h6>Base INSS:</h6>
@@ -12,7 +13,7 @@ export default class BaseInss extends Component {
           value={`${new Intl.NumberFormat('pt-BR', {
             style: 'currency',
             currency: 'BRL',
-          }).format(this.props.valueBaseINSS)}`}
+          }).format(valueBaseINSS)}`}
           className="inputText"
         ></input>
       </label>
