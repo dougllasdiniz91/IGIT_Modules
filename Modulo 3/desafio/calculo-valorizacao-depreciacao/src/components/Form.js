@@ -1,48 +1,64 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Installments from './Installments';
 
 export default function Form() {
+  const [initialValue, setInitialValue] = useState(0);
+  const [interestRate, setInterestRate] = useState(0);
+  const [period, setPeriod] = useState(0);
+
+  useEffect(() => {
+    return () => {};
+  }, []);
   const handleInitialValue = (event) => {
-    console.log(event.target.value);
+    setInitialValue(event.target.value);
   };
-  const handleInterstRate = (event) => {
-    console.log(event.target.value);
+  const handleInterestRate = (event) => {
+    setInterestRate(event.target.value);
   };
 
   const handlePeriod = (event) => {
-    console.log(event.target.value);
+    setPeriod(event.target.value);
   };
   return (
     <div className="row">
       <div className="input-field col s12 m4 l4 ">
+        <h6>Montante Inicial:</h6>
         <input
           type="number"
           id="initialValue"
           min="0"
           max="100000"
+          value={initialValue}
           onChange={handleInitialValue}
         ></input>
-        <label htmlFor="initialValue">Montante Inicial</label>
       </div>
       <div className="input-field col s12 m4 l4 ">
+        <h6>Taxa de juros mensal:</h6>
         <input
           type="number"
           id="interestRate"
           min="-12"
           max="12"
-          onChange={handleInterstRate}
+          value={interestRate}
+          onChange={handleInterestRate}
         ></input>
-        <label htmlFor="interestRate">Taxa de juros mensal</label>
       </div>
       <div className="input-field col s12 m4 l4 ">
+        <h6>Taxa de juros mensal:</h6>
         <input
           type="number"
           id="period"
           min="1"
           max="36"
+          value={period}
           onChange={handlePeriod}
         ></input>
-        <label htmlFor="period">Período (meses)</label>
       </div>
+      <Installments
+        initValue={initialValue}
+        intRate={interestRate}
+        qtdPeriod={period}
+      />
     </div>
   );
 }
