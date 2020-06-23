@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Installments from './Installments';
 
 export default function Form() {
-  const [initialValue, setInitialValue] = useState(0);
-  const [interestRate, setInterestRate] = useState(0);
-  const [period, setPeriod] = useState(0);
+  const [initialValue, setInitialValue] = useState(1000);
+  const [interestRate, setInterestRate] = useState(0.5);
+  const [period, setPeriod] = useState(1);
 
-  useEffect(() => {
-    return () => {};
-  }, []);
   const handleInitialValue = (event) => {
     setInitialValue(event.target.value);
   };
